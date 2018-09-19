@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expressions</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Expressions Part 1</h1>
+    <p>Expressions are used in programming to evaluate primary data.  Expressions in programming are much like expressions in math.
+        We will have at least 2 features to an expression, they must have <b>Operators and Operands</b></p>
+    <p>Operands are what we call primitive forms of data.  We will be working with 4 main types</p>
+    <ul>
+        <li><p>integers, numbers without decimals</p></li>
+        <li><p>floats, which are numbers with decimals</p></li>
+        <li><p>booleans, true or false</p></li>
+        <li><p>characters, single letters</p></li>
+    </ul>
+    <p>There are many operators but first we will look into mathematical operators.  We will
+        primarily be using these 7 throughout the course.</p>
+    <ul>
+        <li><p>addition '+'</p></li>
+        <li><p>subtraction '-'</p></li>
+        <li><p>multiplication '*'</p></li>
+        <li><p>division '/'</p></li>
+        <li><p>modulus '%'</p></li>
+        <li><p>increment '++'</p></li>
+        <li><p>decrement '--'</p></li>
+    </ul>
+    <p>To build a basic expression we have &lt;operand&gt;&lt;operator&gt;&lt;operand&gt;.  An example would be 5 + 6</p>
+    <h2>Evaluation</h2>
+    <p>Evaluating an expression is how the computer reads the expression and assigns a value to it.  In the example above 5 + 6 = 11</p>
+    <p>This may seem obvious but later on how expressions evaluate can become confusing.  It is also important to understand that
+        the compiler does not care about the 5 + 6 part is simply reads it as 11.  Programming language like math also rely on Order
+        of operations. </p>
+    <h2>Something is wrong</h2>
+    <p>Inside of your System.out.println() try running the expression '28 / 6' and see what you get. Notice that outcome is simply 4.
+        This is because 28 and 6 are both integers.  The compiler reads the data as integers which means no decimal places.  So when it evaluates
+        this expression is only reads the integer value.  It ignores any fraction that is left over.  It is not rounding the number it is simply <b>Cutting off the value of the fraction</b></p>
+    <h2>Check Your Understanding</h2>
+    <p>What will the following expression evaluate to?<br> (2 - 3) * 4 + (14 - 7) / 4</p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer: -3</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: -2.25</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> The solution is -3 because of Integer math.  When we divide by integers we cut off any decimal and are
+        left only with whole numbers.  so (14 - 7) / 4 evaluates to 7/4 = 1.
+    </div>
+
+</div>
+</body>
+</html>

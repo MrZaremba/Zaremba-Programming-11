@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Data Stream</h1>
+    <p>We have been using data streams this entire course.  Now we are going to take a much closer look at how they work.  Java I/O stands
+    for Java IN OUT.  The "in" and the "out" are streams of data.  Streams of data are linked to physical components of your computer.  It is
+    how we get information such as keyboard input.  When we press a key it sends the stream of data to the system.  The way the
+    keyboard sends information is by sending a single byte of data for a key press.  A byte of data is equal to 8 bits and 1 bit is
+    a simple 0 or 1 in binary.  The purpose of this lesson is not to dive into binary but to understand how we can get data streams and
+    make sense of them in our programs.  When we hit a key it sends 1 byte of data which is a number.  This number gets translated into a key
+    by the ASCII (defines what numbers are equal to what keys).  Example the lower case 'a' is equal to the number 97.</p>
+    <h2>Byte Stream</h2>
+    <p>Recall when using a <b>Scanner</b> object the parameter for the constructor was <b>System.in</b>.  This is our basic form of
+    input stream to get information.  It is in the form byte stream which we will see in an example has cumbersome process to convert it
+     to a string like we were doing in some of our programs.  Likewise, <b>System.out</b> is the output stream that we use to print to
+    the console.  Streams have more uses however, then simply getting characters from a keyboard and printing characters to the console.
+    It can read from files stored on the hard drive, write to files stored on the hard drive, copy files, send information over networks,
+    receive information over networks, and many other ways your computer can send and receive data.  The first one we will look at
+    is the byte stream.  The byte stream is the simplest form of data streams; once we are done this unit you most likely will not
+    use the byte stream as we have other classes that are easier to use however, they are all based off of the byte stream and are what
+    we sometimes refer to as "wrappers" to make the class easier to use.  The following video shows a simple example of using a byte
+    stream.</p>
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zw6CPrJ1CWE" allowfullscreen></iframe>
+    </div>
+    <h2>Check Your Understanding</h2>
+    <p>Which of the following is NOT a data stream?</p>
+    <div class="row">
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">getting data from a file</div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">keyboard inputs
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(true)">returning an object from a method.
+            integer.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">getting data from a server</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> All data streams interact with a form of hardware.  Reading a file interacts with hard drive,
+        keyboard inputs interacts with keyboard, getting data from a server interacts with network card.  Returning an object form a
+        method is software to software within your program it is not considered a data stream.
+    </div>
+
+</div>
+</body>
+</html>

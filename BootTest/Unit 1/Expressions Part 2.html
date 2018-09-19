@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expressions</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Expressions Part 2</h1>
+    <p>A function and programming simply put is a series of expressions that we give a name.  We can then refer to this name
+        to instantly run all the expressions in this group.</p>
+    <p>Functions in programming can operate very similar to mathematical functions.  We can take in some sort of input,
+        the independent variable, perform some operations on it, then we get back the dependent variable as a result.  You can think of
+        functions in programming like a black box that takes in information and gives back information.  What happens inside or how
+        this box does this does not really matter as long as we know that it works.</p>
+    <img class="img-fluid mx-auto d-block" src="https://qph.fs.quoracdn.net/main-qimg-42b2f853144111ef76a8bff95df458c8.webp">
+    <p>In programming however, some functions take in no parameters and send out no information.  They simply run some sort of
+        task behind the scenes</p>
+    <h2>How functions evaluate</h2>
+    <p>When information is taken into a function and then information is sent out this will also evaluate.  We can treat these
+        functions just like primitives.  We can run operations on them and receive values.  Some examples of built in functions in java
+        are the math functions.  Remember our primitive operators do not include items such as exponents, square roots, trigonometry ratios, etc.
+        We need at times to use this math in programming.  We could write these functions our selves and use them but often
+        somebody else has already done this.  We can just use their functions within our programs</p>
+    <p>Watch the following video to see how we can perform expressions on functions and how they will evaluate</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bQGglTU4Zf4" allowfullscreen></iframe>
+    </div>
+
+    <h2>Check Your Understanding</h2>
+    <p>What will the following expression evaluate to?<br> (9 % 4) - 8 + Math.pow(2,3) + (Math.sqrt(9) / 3)</p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer: 2</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: 0</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong><br> The solution is 2 because:<br> (9 % 4) - 8 + Math.pow(2,3) + (Math.sqrt(9) / 3)
+        <br> (1) - 8 + 8 + (3/3)
+        <br> 1 + 1
+        <br> 2
+    </div>
+
+</div>
+</body>
+</html>

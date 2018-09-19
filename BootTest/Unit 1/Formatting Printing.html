@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Formatting Println</h1>
+    <p>To start learning programming it is much easier to learn while use what we call the console to display information.
+    Learning to code a graphical user interface or a GUI is difficult and time consuming.  It also requires knowledge of code that
+        you have yet to learn.  This is why when starting out we will be using the console.  Sometimes it is we need to format what
+    we print to the console so that it is more readable.  We have a few ways we can accomplish this.</p>
+    <h2>Print vs Println</h2>
+    <p>We have to ways we can print to the console the print and println statements.  Here is the code for both:<br><code>
+        System.out.println(String);<br>System.out.print(String);<br>
+    </code>The difference is println will start a new line each statement.  While the print will not it will lay the items side
+    by side.</p>
+    <h2>Escape Characters</h2>
+    <p>Sometimes we need to enter in characters that are either not on our keyboard or the compiler would read as code.  To
+    enter these characters we can use something called escape characters.  Here is a table of the commonly used ones:</p>
+    <table class="table table-responsive-md table-striped mw-100">
+        <tr>
+            <th>Escape Sequence</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>\t</td>
+            <td>Insert a tab in the text at this point</td>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>Insert a backspace at this point.</td>
+        </tr>
+        <tr>
+            <td>\n</td>
+            <td>Insert a new line in the text at this point.</td>
+        </tr>
+        <tr>
+            <td>\r</td>
+            <td>Insert a carriage return in the text at this point</td>
+        </tr>
+        <tr>
+            <td>\'</td>
+            <td>Insert a single quote in the text at this point</td>
+        </tr>
+        <tr>
+            <td>\"</td>
+            <td>Insert a double quote in the text at this point</td>
+        </tr>
+        <tr>
+            <td>\\</td>
+            <td>Insert a backslash in the text at this point</td>
+        </tr>
+    </table>
+    <p>Example:<br><code>
+        System.out.println("Index\tValue\n0\t\t1\n1\t\t2";
+    </code></p>
+    <img class="img-thumbnail" src="../images/formatting.png" height="127" width="220"/>
+    <h2>Getting User Input</h2>
+    <p>Getting user input is a very large topic in programming.  Later in the course we will get into this topic in great detail.  However,
+    we will need to in some of our programs leading up to that topic get user input to make them more interactive.  We will be using something similiar
+    to the Math functions from the previous lessons about expressions.  We will use what is called the scanner.  To use the scanner we must first import it.
+    Jave automatically imports the Math for you so it is not necessary but the scanner we must import it our selves.  Here is how we set it up:<br>
+    <code>import java.util.Scanner;<br>
+    public class ScanStuff{<br>&emsp;public static void main(String args[]){<br>&emsp;&emsp;Scanner scan = new Scanner(System.in);<br>&emsp;
+    &emsp;}<br>}<br></code>This sets up the scanner.  What all that code means we will get to eventually.  For now just accept that is what we do.
+    Now we can scan for user input.  To use the scanner add the following lines of code.<br><code>
+            System.out.println("What is your name?");<br>String name = scan.next();<br>System.out.println(name);<br>
+        </code>scan.next() will evaluate to a String of what ever the user inputs into the console.  When the code is run it will wait
+    for user input in the console.  Try typing something and make sure it prints correctly.</p>
+</div>
+</body>
+</html>

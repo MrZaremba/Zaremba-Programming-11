@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">For Loop</h1>
+    <p>The for loop is different as it sets the starting point, end point and increment of a variable right in the
+    initial statement.  The advantage of this is that the programmer will not get an infinite loop as the number of loops
+    is already coded into the initial set up.  Here is the general format of a for loop:<br><code>for(int i = 0;<i>condition based on
+        i</i>;<i>change i value</i>){<br>&emsp;<i>code</i><br>&emsp;}</code></p>
+    <p>The useful thing about the for loop is that the value for 'i' changes during each iteration.  Example:<br><code>
+        for(int i=0;i < 10; i++){<br>&emsp;<i>System.out.print(i + ", ");</i><br>&emsp;}<br>
+    </code>The output of this would be:<br> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, <br> Notice that i starts at 0 this means that
+    it does not increment until after the loop is over.  It stops at 9 because when 'i' is at 9 after the print statement the loop
+    increases it to 10 which ends the loop.</p>
+    <h2>Break Statement</h2>
+    <p>At any time during a loop we can end it early be having a conditional statement and then inside that statement
+    have <code>break;</code>.  Example:<br><code>for(int i = 0;i<10;i++){<br>&emsp;if(i == 5) break;<br>&emsp;System.out.print(i + ", ");<br>&emsp;}<br></code>
+    The output for this code would be 0, 1, 2, 3, 4, . This is because when 'i' is 5 it breaks before reaching the System.out line</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cJKiuUuwLkk" allowfullscreen></iframe>
+    </div>
+
+    <h2>Check Your Understanding</h2>
+    <p>What is the output from the following line of code:<br><code>
+        for(int i = 6; i > 0; i--){<br>&emsp;if((i % 2) == 0) System.out.println("i is even");<br>&emsp;else System.out.println("i is odd");<br>&emsp;}
+    </code></p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(true)" class="p-2 answer" style="width:100px; text-align: center">even<br>odd<br>even<br>odd<br>even<br>odd</div>
+        <div onclick="getAnswer(false)" class="p-2 answer" style="width:100px; text-align: center">even<br>odd<br>even<br>odd<br>even<br>odd<br>even</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> The last even will not run because when i = 0 the loop stops and it never prints out.
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Types</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Strings</h1>
+    <p>So far we have only dealt with data that has a single piece of data.  Strings are different in that they are
+    not considered to be primitive data types.  They consist of multiple primitive data, which are of type character.
+    Strings are a "string" of characters to form words, numbers, symbols or a anything we need them to be.  They are
+    our first type of data that is <b>Iterable</b>.  What that means is that the String has index positions.  Index
+    positions point to a value at specific spot. Here is an example of index positions of a string:</p>
+    <table class="table table-striped table-responsive-sm smaller">
+        <tr>
+            <th>Index</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>e</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>l</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>l</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>o</td>
+        </tr>
+    </table>
+    <h2>Indexing</h2>
+    <p>Indexing in programming always starts off at 0.  This means in the string "Hello" there are 5 positions labeled 0
+    through 4.  We can use code to read what hte value at each index position is.  With strings however, they are what we call
+    <bold>Immutable</bold>.  This means we cannot go in and change the value of any index position.  WIth other <b>Iterable</b>
+    data we can but not strings.  The following code shows how we can grab values of index positions:<br>
+    <code>String name = "Patrick Stewart";<br>String lastName = name.substring(8,15);<br>System.out.println(lastName);<br></code>
+        The output of the following code is Stewart.  The example above is called string <b>slicing</b>.  We can also
+    <b>concatenate</b> strings.  This means combine 2 strings together.  Example:<br><code>String firstName = "John";<br>
+        String lastName = "Stewart";<br> String fullName = lastName + firstName;<br></code> This will combine the strings
+    together to get the a full name.</p>
+    <h2>Check Your Understanding</h2>
+    <p>What will be printed to the console from the following code:<br><code>String school = "Windemere";<br>
+        String city = "Vancouver";<br>System.out.println(school.substring(0,3) + "y " + city.substring(3,8));</code></p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: Winyncouver</div>
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer: Windy couver</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: windycouver</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> The solution is: Windy couver.  Notice the space after 'y' a space in java is considered
+        a character.
+    </div>
+
+</div>
+</body>
+</html>

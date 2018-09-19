@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primitive Variables</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Primitive Data Types</h1>
+    <p>Primitive data types will be the first type of data in we will learn to store inside of our programs.  To store
+    information we need to create what we call variables.  Variables in java either point to primitive data stored on the
+    on the computer or they will point to a reference to an object (more on this later).</p>
+    <p>Variables in programming are very similar to variables in math.  They are place holders for information
+    we do not yet have.  These variables can change as the program is running.  To create a variable in java we must declare
+    a <b>Type</b>.  The table below is a list of the most commonly used primitive types:</p>
+    <table class="table table-responsive-md table-striped mw-100">
+        <tr>
+            <th>Type</th>
+            <th>Abbreviation</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Integer</td>
+            <td>int</td>
+            <td>Positive and negative whole numbers to a maximum or minimum value</td>
+        </tr>
+        <tr>
+            <td>Double</td>
+            <td>double</td>
+            <td>Numbers that contain decimals.  2 pieces of information is stored. Value to either side of decimal</td>
+        </tr>
+        <tr>
+            <td>Boolean</td>
+            <td>boolean</td>
+            <td>True or False value</td>
+        </tr>
+        <tr>
+            <td>Character</td>
+            <td>char</td>
+            <td>A single letter</td>
+        </tr>
+    </table>
+
+    <h2>Declaring a Variable</h2>
+    <p>To declare a variable we first declare the type then the name followed by a semicolon &lt;type&gt; &lt;name&gt;;<br>
+    Example: <code>int x;</code><br> This creates a spot in memory and names that location 'x'.  After we have declared the variable
+    we can use an <b>assignment operator '='</b> to specify what integer value you wish it to hold <br>
+    <code>x = 10;</code><br></p>
+    <p>We can now use the variable we create in code to evaluate expressions.  Look at the following example. <br>
+    <code>int x = 10;<br>int y = x * 2;</code><br>In this example we first declare and assign in one line the variable
+    'x' and assign it 10.  Then we created and assigned the variable 'y' and used the value from 'x' as a number in the expression.</p>
+    <h2>Data Abstraction</h2>
+    <p>The concept of data abstraction will be looked at over the entire course.  Data abstraction is the idea of assigning
+    meaning to the information that is stored in the program.  For primitive types of data it is fairly simplistic.  Once we start
+    learning how to code more complex data the abstraction can become difficult.  Here is a simple way we can assign meaning to a
+    primitive data type.<br><code>boolean lightsOn = true;</code><br>This even to someone who knows little to nothing about code
+    can abstract what information this variable is holding.  By assigning appropriate names to values we can give the values meaning.</p>
+    <p>Here is a video of more ways we can use simple variables in code:</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/V19nOcaIbCA" allowfullscreen></iframe>
+    </div>
+    <h2>Check Your Understanding</h2>
+    <p>Is the following statement going to create an error:<br><code>int x = 10;<br>double y = x;<br>int z = y;</code></p>
+    <div class="d-flex justify-content-around mb-lg-2">
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: This code will have an error because 'y' is a double and cannot be assigned to 'z'</div>
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer: This code will not have an error because 'y' is assigned an integer value so 'z' will take on
+            the assigned integer value.</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> This code will create an error.  When double 'y' is assigned to 'x' it will add storage space for holding
+        decimals.  When we try use 'y' to create 'z', 'y' is a double and cannot be assigned to an integer.  Note with a topic called casting
+        it is possible.
+    </div>
+
+</div>
+</body>
+</html>

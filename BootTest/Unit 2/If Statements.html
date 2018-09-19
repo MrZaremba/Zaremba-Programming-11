@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">If Statements</h1>
+    <p>If statements are the first means of what we call <bold>Control Flow</bold>.  Control flow of a program
+    is the ability for the compiler to make decisions based on conditions.  The general form of an "if" statement
+    in java is:<br><code>if(<i>condition</i>) {<br><i>code;</i><br>}</code></p>
+    <p>Conditions will always evaluate to true or false.  The way they work is if the condition is true, then we execute the
+    block of code.  If it is false then we skip over the block of code and continue with our program.</p>
+    <img class="img-fluid mx-auto d-block" src="https://www.tutorialspoint.com/scala/images/scala_decision_making.jpg" alt="Condtional Statement Diagram">
+    <h2>Branching Programs</h2>
+    <p>Using the if statement we can create what is called a simple branching program.  We can make checks and follow different branches
+    further down our program.  Here is sample code to create a basic branching program:<br><code>int age = 16;<br>int minDriverAge = 16;
+        <br>if(age < minDriverAge){<br>&emsp;&emsp;System.out.println("You are too young to drive");<br>&emsp;&emsp;}<br></code></p>
+
+    <h2>Check Your Understanding</h2>
+    <p>What will be printed to the console from the following code:<br><code>boolean isFlying = true;<br>
+    if(!isFlying){<br>&emsp;&emsp;System.out.println("Ohh no I am falling");<br>&emsp;&emsp;}<br>System.out.println("That
+     was fun");</code></p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: Nothing</div>
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer: That was fun</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: Ohh no I am falling<br>&emsp;&emsp;&emsp;&emsp;That was fun</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> Solution: That was fun.  This is because the ! infront of the isFlying is checking
+        to see if the value is false.  The value is true so that means the statement will be false and not run the code
+        inside the conditional statement.
+    </div>
+
+</div>
+</body>
+</html>

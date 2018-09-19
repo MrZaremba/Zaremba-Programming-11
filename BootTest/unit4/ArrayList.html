@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">ArrayList Class</h1>
+    <p>One of the most important parts of programming is not just learning how OOP works, designing methods, and understanding
+    control flow.  These items re very similiar across all languages.  Learning how to use prebuilt classes or libraries
+    is a very important part.  This lesson is designed to teach you how to use a commonly class called the ArrayList.  This
+    class is part of a bigger group of classes called "Collections".  For this course we will only be using the ArrayList
+    class as it is common and we will have many uses for it.  As the name suggests it operates similiar to an array.  The
+    main difference is it has several pre built methods and features.  When we learned about arrays you had to write 3 methods.
+    Add/Insert and Delete values from the array.  Some of you may have realized how common these methods are and wondered
+    would they not have already been coded by someone? Why not just use their work code?  Do I have to right this code into any
+    program every time I want to use these features.  The nice part of OOP is that we can import packages(collection of classes)
+    and use their pre built class in our code.</p>
+    <h2>Using the ArrayList Class</h2>
+    <p>To start we need to import the class at the top of our project.  The code to write this is <code>import java.util.ArrayList;</code>
+      This gives us access to the class.  We can import simply by creating a variable with type "ArrayList&lt;object type&gt;" then
+    the IDE will underline it in red and ask if we want <kbd>alt + enter</kbd> and that will automatically input it.  Here is
+    an example of creating an arrayList to hold cars:<br><code>ArrayList&lt;Cars&gt; carList = new ArrayList&lt;&gt;();</code><br>
+    The angled brackets dictating what type of object is being held in the array list are called <b>generics</b>.  This is a topic
+     beyond the scope of this course.  We just simply need to know how to use it.</p>
+    <h2>Using the class built in methods</h2>
+    <p>There are several built in methods in the ArrayList class that we can utilize.  Here is a list of the most common:</p>
+    <table class="table table-responsive-md table-striped">
+        <tr>
+            <th>Method</th>
+            <th>Functionality</th>
+        </tr>
+        <tr>
+            <td>add(int i, E element)</td>
+            <td>Adds an item to list at position 'i'(or just use E element as parameter and added to end of list)</td>
+        </tr>
+        <tr>
+            <td>clear()</td>
+            <td>Clears the list</td>
+        </tr>
+        <tr>
+            <td>get(int i)</td>
+            <td>Gets the element stored at position 'i'</td>
+        </tr>
+        <tr>
+            <td>isEmpty()</td>
+            <td>Returns true if list is empty, else it returns false</td>
+        </tr>
+        <tr>
+            <td>remove(int i)</td>
+            <td>Removes element at index position 'i'</td>
+        </tr>
+        <tr>
+            <td>size()</td>
+            <td>Returns an integer of size of list</td>
+        </tr>
+    </table>
+    <p>There are others.  All java libraries come with a Java Doc.  You can find the ArrayList java doc
+    by clicking <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank">here.</a>  This
+    shows a list of all the methods and the parameters along with a description.  There is more information on the class such
+     as its constructors.  I will let you explore it.  Any built in class in java we are using will have a javadoc.  To access
+    them you can typically google the class name and javadoc to find it.  Later in the course I will show you how to generate
+    javadocs for your projects.</p>
+    <h2>ArrayLists of Primitives</h2>
+    <p>The array list cannot hold primitives it can only hold objects.  Java has created several built in objects that are
+     designed to hold primitives.  So if wanted to make an ArratyList of integers we can use the Integer object.<br><code>
+            ArrayList&lt;Integer&gt; myNums = new ArrayList&lt;&gt;();<br>
+        </code> This will create a list holding Integer Objects.  You have briefly seen this in use when we used the
+    <code>Integer.parseInt(String s)</code> to change a string into an integer.</p>
+    <p>We have learned a lot the past 3 lessons about how to use classes this video will bring it all together with a simple
+    example.</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HIV3GN12wqg" allowfullscreen></iframe>
+    </div>
+    <h2>Additonal Information</h2>
+    <br>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uwdmrR1ZXR0" allowfullscreen></iframe>
+    </div>
+
+    <h2>Check Your Understanding</h2>
+    <p>Using the Javadoc what does the following methods do?<br>toArray();</p>
+    <div class="row">
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Nothing it is not an array.</div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Creates an array of the same size as the list.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">This only works when we are storing primitives in an ArrayList
+            integer.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(true)">Returns an array hold all the elements in proper sequence.</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> This method will take every value in the ArrayList and then create an array and return it to
+        where the method was called.  Allowing you to take your ArrayList and turn it into an array.
+    </div>
+
+</div>
+</body>
+</html>

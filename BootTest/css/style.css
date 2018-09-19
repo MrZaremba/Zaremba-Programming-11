@@ -1,0 +1,50 @@
+body{
+    background-color: #eee2dc;
+}
+
+p{
+    color: #123c69;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+h1, h2{
+    color: #ac3b61;
+    font-family: 'Roboto', sans-serif;
+}
+
+.answer {
+    background-color: #bab2b5;
+    color: #123c69;
+    padding: .5rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 3px solid #123c69;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+
+}
+
+.smaller {
+    max-width: 100px;
+    margin: auto;
+}
+.smaller td{
+    text-align: center;
+}
+
+a{
+    color: #ac3b61;
+}
+h4{
+    color: #ac3b61;
+}
+
+.row img{
+    cursor: pointer;
+}
+.container a:hover{
+    text-decoration: none;
+    color: #ac3b61;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">While Loop</h1>
+    <p>The problem with branching programs is that the code only flows in one direction.  Take your paper rock scissors game for example.
+    Once the user submitted their input the code ran the program ended.  It would be better if the code would go back to the beginning
+    and start over.  It could keep doing this until the user puts in a certain input.  That is one use for loops or iterations.  Here
+    is an example of the format of a while loop:<br><code>while(<i>condition</i>){<br>&emsp;<i>block of code</i><br>&emsp;}</code></p>
+    <p>The condition just like in if and else if statements always evaluates to a boolean.  The loop will continue to run as long as the
+    condition is true.  Once it turns false the loop will stop and the code will jump past the block.</p>
+    <h2>Do While Loop</h2>
+    <p>This is very similiar to the while loop.  The only difference is that it checks the condition after the loop is complete.
+    This should be used in a case where you want to guarantee the loop runs at least once.  The general format for the do while loop is:
+    <br><code>do{<br>&emsp;<i>block of code</i><br>&emsp;}while(<i>condition</i>);<br></code>This will run the block of code
+    then check the condition.</p>
+    <h2>Infinite Loops</h2>
+    <p>Infinite loops occur when the programmer does not lay in a condition that will every become false.  This can occur by accident
+    and will cause the program will crash or freeze your computer.  Be sure to double check your conditions when using iterations.</p>
+    <h2>Check Your Understanding</h2>
+    <p>What will be the output of the following code:<br><code>int x = 5;<br>while(x > 0){<br>&emsp;System.out.print(x + ", ");<br>
+    &emsp;x--;<br>&emsp;}</code></p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(true)" class="p-2 answer">5, 4, 3, 2, 1</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">4, 3, 2, 1, 0</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">5, 4, 3, 2, 1, 0</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> The solution is 5, 4, 3, 2, 1<br>It starts out at 5 because the decrement to x is after the print
+        statement.  It does not print 0 because once 'x' is 0 the condition is false and the loop will not run.
+    </div>
+
+</div>
+</body>
+</html>

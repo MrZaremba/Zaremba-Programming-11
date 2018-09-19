@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Classes</h1>
+    <p>Classes in java are used to create complicated form of data abstraction.  Recall data abstraction is the process of
+    giving meaning to our code.  The information we are coding into the computer represents something.  It can be a task,
+    an object, or even an idea.  Classes are the crux of what we call Object Orientated Programming.  This idea of an object
+    in programming is that we create a class that has an appropriate name for what data it is abstracting.  It contains
+    <b>fields</b> and it contains <b>methods.</b>  These methods will not longer just be static methods that we can only call
+    from our main class.  Here is the general formatting for a class:<br><code>
+            public class <i>name</i>{<br>&emsp;fields<br>&emsp;methods<br>&emsp;}
+        </code></p>
+
+    <h2>Fields</h2>
+    <p>Fields are properties that the class will have.  If we were making a class that was to represent a car we would
+    need information such as: colour, maxSpeed, currentSpeed, make, model etc.  What ever we needed to run our
+    program.  We create fields at the start of a class.  These fields will be created very similiar to how we create
+    variables.  However, we need to add in some more information.  We use to initialize a variable with <code>
+            int num;
+        </code> Now we need more information.  We need to add on what we call <b>accessors</b>.  These are to determine
+    what access are other classes allowed with this variable.  There are several but for now we will use two, <b>public</b>
+      and <b>private</b>.  Public means that anywhere in our program from any class the variable can be accessed and changed.
+    Private means that this variable can only be accessed from within the class itself.  Typically we are going to want to use
+    private variables.  This is because we will want to make sure that the variables are not being misused.  A simple example would
+     be if another class tried to change the speed of the car to a negative number.  However, our class does not allow for negative
+     numbers and having this number negative may cause errors. By keeping variables private and restricting access we can make sure
+     they stay are not manipulated in a way that causes errors.</p>
+    <h2>Methods</h2>
+    <p>If fields are the attributes of the car methods can be thought of as the behaviour of the car.  We can have methods such as
+    speedUp, or slowDown.  The general formatting for a method is similar to a static method.  We also need to ensure in our signature
+    that we have an accessor.  Just like fields we can have private or public methods.  Here is the general form:<br><code>
+            <i>accessor return type name</i>(<i>parameters</i>){<br>&emsp;<i>body</i><br>&emsp;}<br>
+        </code>Here is an example of a simple method for the car class.  <code><br>public void speedUp(){<br>&emsp;
+            if(speed < maxSpeed) speed++;<br>&emsp;}
+        <br></code>This would take the field speed and increment it by one as long as the condition of maxSpeed is passed.  Watch the
+    following video to see this class created.</p>
+
+    <h2>Check Your Understanding</h2>
+    <p>Classes should only be used to describe a physical representation of something in reality.</p>
+    <div class="row">
+        <div class="col-lg-6 answer text-center" onclick="getAnswer(false)">True</div>
+        <div class="col-lg-6 answer text-center" onclick="getAnswer(true)">False
+        </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> False,  Classes can represnt more than just physical objects in reality.
+        we use them to also represent ideas, or jobs.
+    </div>
+
+</div>
+</body>
+</html>

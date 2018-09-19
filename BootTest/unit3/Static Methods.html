@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Static Methods</h1>
+    <p>Methods or functions are blocks of code that have been given a "name".  They are like functions in math.  They take in
+    some input and they give an output.  We have seen a few functions so such as <code>Math.pow(2,3)</code>.  Math is not a
+    function which we will not refer to as methods.  The pow(2,3) is the actual method.  The Math portion is called a class
+    which we will be getting to soon.  Methods can take in <b>parameters</b> and <b>return</b> values.  Or it could do
+    neither.  It depends what we want the method to accomplish.  Here is the general format for a method:<br><code>
+            <i>signature</i> <b>name</b>(<i>parameters</i>){<br>&emsp;<i>block of code</i> <br> &emsp; return value if there is one
+            <br>&emsp;}
+        </code></p>
+    <p>Naming methods should always be a good description of what the method accomplishes.  This is another example of data abstraction.
+    This method is essentially going to become a piece of data and we need to give it meaning as well.  Naming conventions
+     in java for methods are first word in name starts with a lowercase letter and any consecutive words start with an upper
+    case letter.  Note your method name should rarely be more than two words in length.</p>
+    <h2>Signature</h2>
+    <p>Signatures in Java a few parts to them.  They are declaring a few things about method before we get to the name and parameters.
+    The first part of the signature is accessibility, what classes are allowed to use this method.  The second part of the signature is
+    stating the return value.  This will be a data <b>type</b> or <b>void</b>.  If you have a data type the method must return that
+    data type.  If it is void then it returns nothing.</p>
+    <h2>Parameters</h2>
+    <p>Parameters are used to give the method additional information.  For example the Math.pow(2,3) requires to parameters to run.  It needs
+    the base of the power and the exponent of the power.  Without these how could it know what you wanted?</p>
+    <h2>Return Values</h2>
+    <p>Methods do not have to return anything.  However, if they do return a value, that value will be sent to where the method is "called".
+    Calling a method is how we invoke the code to run.  For example, when we typed in <code>Math.pow(2,3)</code> that was us calling the method.
+    When it returned its double value it would be inserted where the method was called.  This would evaluate the invocation of the method to the
+    return type.  If a method has no return type then it simply would evaluate to null.</p>
+    <h2>Example of a static method</h2>
+    <p>Here we will show you an example of a static method that can calculate the pythagorean theorem of a right angle triangle<br><code>
+        //returns the hypotenuse of a right angle triangle given side 'a' and 'b'
+        static double pyth(double a, double b){<br>
+        &emsp;return Math.sqrt((a*a + b*b));<br>&emsp;}
+    </code><br>Here is how we could call it in our code:<br><code>
+        double a = 4;<br>double b = 3;<br>double c = pyth(a, b);<br>
+
+    </code>This will set the double c to the value of the hypotenuse of the right angle triangle.</p>
+    <h2>Video 1</h2>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YrA5HhYbUko" allowfullscreen></iframe>
+    </div>
+    <h2>Video 2</h2>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eWrargJ3FDM" allowfullscreen></iframe>
+    </div>
+    <h2>Supplemental Video</h2>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PZRI1IfStY0" allowfullscreen></iframe>
+    </div>
+    <h2>Check Your Understanding</h2>
+    <p>What would be a suitable name for this method?  What would you have to fix to make it work?<br><code>
+        static double theMeth(int a, int b){<br>&emsp; int returnVal = a;<br>&emsp;if(b == 0) return 1;<br>&emsp;for(int i = 0;i < b;i++){<br>&emsp;&emsp;returnVal *= a;
+        <br>&emsp;&emsp;}<br>&emsp;return returnVal;<br>&emsp;}<br>
+    </code></p>
+    <div class="row">
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Name: multiply Fix: Nothing.</div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Name: power Fix: Make sure the parameters are doubles.</div>
+        <div class="col-lg-3 answer" onclick="getAnswer(true)">Name: power Fix: Make sure the return values is an integer. </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Name: multiply Fix: Change parameters to doubles.</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> This alert box could indicate a successful or positive action.
+    </div>
+
+</div>
+<div class="container">
+
+</div>
+</body>
+</html>

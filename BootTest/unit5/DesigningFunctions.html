@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Data Abstraction</h1>
+    <p>We have mentioned the concept of data abstraction a few times in this course so far.  Now we are going to really get
+    into the details on how exactly we can use this to write our programs.  The name comes from abstract art.  The meaning behind
+    the art is hidden or blurred.  In programming we want to hide the details behind an interface (methods).  Outer classes use the
+    interface and inside of the class you are creating does all the work below the surface.  An example from our lessons on classes
+    would be the unique identifier in our Car class. We can get our car id num but how it was created happened below the surface. </p>
+    <h2>How to Design Data Abstractions</h2>
+    <p>We use classes to create our own data abstractions.  We learned they consist of fields and methods.  Some of these are
+    private or happening below the surface while some are public which is creating the interface for the class.  Note: there
+    is something in java called Interface, currently I am not referring to that nor will I for rest of course.  That is taught in
+    programming 12.  The reason why we hide parts of our class is mainly so that we can keep our interface with the class constant.
+    If we need to change the implementation of the code we can just change everything that is happening below the surface.  This
+    method is preferred that way if you change a class you do not now have to go into all the classes that use it and change their
+    interactions with it.  THe public interface has not changed.  We have 4 phases of designing our data Abstraction that will
+    be covered in this unit they are <b>Specifications, Usage Scenarios, Test Specifications, and Implementation.</b></p>
+    <p><b>Specification:</b> First thing we want to think about is what methods does this abstraction require?
+        What is our public interface?</p>
+    <p><b>Usage Scenarios:</b> Think about all the situations that our other classes are going to use the abstraction.</p>
+    <p><b>Test Specifications:</b> Look at each method that we specified look at all the possible scenarios of usage
+    and design tests to ensure it is working.</p>
+    <p><b>Implement:</b> Involves deciding on an internal representation of the data in the abstraction, and then implementing the public
+     and supporting private methods to make it work.</p>
+
+</div>
+</body>
+</html>

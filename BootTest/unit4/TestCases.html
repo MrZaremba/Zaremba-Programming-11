@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Test Cases</h1>
+
+    <h2>SubTitleluation</h2>
+
+    <h2>Check Your Understanding</h2>
+    <div class="row">
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Name: multiply Fix: Nothing.</div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Name: power Fix: Make sure the parameters are doubles.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(true)">Name: power Fix: Make sure the return values is an
+            integer.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">Name: multiply Fix: Change parameters to doubles.</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> This alert box could indicate a successful or positive action.
+    </div>
+
+</div>
+</body>
+</html>

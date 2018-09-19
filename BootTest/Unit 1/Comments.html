@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Comments</h1>
+    <p>Comments are used to write notes to ourselves or future programmers.  They are not considered code.  We can
+    write anything we want in comments.  They often contain information about what our code does.  We have to main types of comments
+     they are:<br><code>//single line comment<br>/*<br>multiple<br>line<br>comments<br>*/</code></p>
+    <p>There is a third type of comment that can be used to create java docs.  Later in the course we will cover
+    these comments but they are much more extensive in what they can do.  For now we will be only using these comments.
+    As you learn more and more about objects and methods we will utilise comments to ensure that our code is more readable.</p>
+    <h2>Check Your Understanding</h2>
+    <p>From the examples below which are acceptable forms of comments:</p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer:<br> #This variable should contain an integer;</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer:<br>//This variable should contain an integer;</div>
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer:<br>//This variable should contain an integer</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> Solution:  //This variable should contain an integer<br> Because we do not need semicolons
+        at the end of comments they are not statements of code.
+    </div>
+
+</div>
+</body>
+</html>

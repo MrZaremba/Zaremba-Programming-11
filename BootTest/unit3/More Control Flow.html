@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">More on Control Flow</h1>
+    <p>There are a few more items we can now add on to our control flow.  We will learn how to use a "switch" statement and we
+    will learn how to use a nested loop</p>
+
+    <h2>Switch Statement</h2>
+    <p>These statements operate similiar to "if" and "else if" statements.  In fact switch statements could be done using
+    if and else if statements.  However, sometimes it is just easier to use a switch.  Especially when dealing with a type of
+    data called "enumerations" (These will not be covered).  A switch statement takes in a variable and checks various cases on it.
+    When it finds the appropriate case it will execute the block of code.  Example: <br><code>
+            String dayOfWeek = "Friday";
+            switch(dayOfWeek){
+            &emsp;case "Monday":<br>
+            &emsp;&emsp;System.out.println("It is Monday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;case "Tuesday":<br>
+            &emsp;&emsp;System.out.println("It is Tuesday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;case "Wednesday":<br>
+            &emsp;&emsp;System.out.println("It is Wednesday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;case "Thursday":<br>
+            &emsp;&emsp;System.out.println("It is Thursday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;case "Friday":<br>
+            &emsp;&emsp;System.out.println("It is Friday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;case "Saturday":<br>
+            &emsp;&emsp;System.out.println("It is Saturday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;case "Sunday":<br>
+            &emsp;&emsp;System.out.println("It is Sunday");<br>
+            &emsp;&emsp;break;<br>
+            &emsp;}<br>
+        </code>Once it finds the case equal to "Friday" it will execute that block of code.  Notice the break statements on each
+    case.  Without these it would keep running.</p>
+    <h2>Nested Loops</h2>
+    <p>Nested loops are loops within loops.  These can be very useful for different algorithms such as sorting or working with
+    something we will get to later called 2d arrays.  When running nested loops learning to follow the blocks of code can
+     be tricky.  Here is a simply example:<br><code>
+            for(int i=1; i<11;i++){<br>&emsp;for(int j = 1;j<6;j++){<br>&emsp;&emsp;System.out.print(i*j + "\t");<br>&emsp;&emsp;}<br>
+            &emsp;System.out.println("");<br>&emsp;}
+        </code><br> Would create a multiplication table.  Give it a try in Intelij to see what it looks like.</p>
+    <h2>Check Your Understanding</h2>
+    <p>What would the output be for the following block of code:<br><code>
+        for(int i=1; i<4;i++){<br>&emsp;for(int j = 4;j>1;j--){<br>&emsp;&emsp;System.out.println("i is: " + i
+        + "\tj is: " + j");<br>&emsp;&emsp;}<br>
+        &emsp;}
+    </code><br> Would create a multiplication table.  Give it a try in Intelij to see what it looks like.</p></p>
+    <div class="row row-equal-height h-100 justify-content-center align-items-center">
+        <div class="col-lg-6" onclick="getAnswer(true)"><img class="mx-auto d-block" src="../images/controlflowmoreanswercorrect.png"
+                                                                    height="314" width="236"/></div>
+        <div class="col-lg-6" onclick="getAnswer(false)"><img class="mx-auto d-block" src="../images/controlflowmoreanswerwrong.png"
+                                                                     height="124" width="256"/></div>
+
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong><p>The Solution is:</p>
+        <table class="table-responsive">
+            <tr><td> <img src="../images/controlflowmoreanswercorrect.png" height="314" width="236"/></td>
+            <td><p>This is because the "j" loop will iterate 3 times for every "i" loop iteration.  This is why "i" is 1, 3 times.  It stays 1 until "j" has completed its loops.</p></td></tr>
+        </table>
+        </div>
+
+</div>
+</body>
+</html>

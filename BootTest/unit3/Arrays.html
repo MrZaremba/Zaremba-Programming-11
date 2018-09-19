@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Arrays</h1>
+    <p>An array is our second type of non-primitive form of data.  An array is a piece of data that contains multiple peices
+    of data.  We can make an array of any type.  Here is an example of instantiating an integer array.<br><code>
+            int[] integers = new int[5];<br></code>
+            the square brackets lets the compiler know it is creating an array of integers and not just an integer.  We have
+            to put the number 5 in the square brackets later as we need to state what size the array is before using it.  The size of an array
+            cannot be changed, ever.  Arrays similiar to strings but different are also indexed.  We can insert the values into the array
+        by setting an index value of the array to the primitive data:<code>integers[2] = 10;</code>.  Here is a table of our current array:</p>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-responsive-sm smaller">
+                <tr>
+                    <th>Index</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>null</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col">
+            <table class="table table-striped table-responsive-sm smaller">
+                <tr>
+                    <th>Index</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>null</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>null</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <p>The tables show what happens when a value is inserted into the array.  We can also fill an array using a loop:<br><code>
+        int[] arr = new int[5];
+        <br>for(int i=0;i < arr.length; i++){<br>&emsp;arr[i] = i*2;<br>&emsp;}<br>
+    </code>Our array would now look like this:</p>
+    <table class="table table-striped table-responsive-sm smaller">
+        <tr>
+            <th>Index</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>8</td>
+        </tr>
+    </table>
+    <p>Video on using arrays</p>
+
+</div>
+</body>
+</html>

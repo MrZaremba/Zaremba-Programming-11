@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Relational Operators</h1>
+    <p>Recall the operators from our previous lesson in expressions:</p>
+    <ul>
+        <li><p>addition '+'</p></li>
+        <li><p>subtraction '-'</p></li>
+        <li><p>multiplication '*'</p></li>
+        <li><p>division '/'</p></li>
+        <li><p>modulus '%'</p></li>
+        <li><p>increment '++'</p></li>
+        <li><p>decrement '--'</p></li>
+    </ul>
+    <p>We have additional operation we can perform called <bold>relational operators</bold>.  These are used to compare 2 values.
+      When relational operators evaluate they will always result in a boolean (true or false).  The table below shows what relational
+    operators we will be using (Not all of them are listed just the commonly used operators):</p>
+    <table class="table table-responsive-md table-striped mw-100">
+        <tr>
+            <th>Operator</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td>Tests if a value is less than another value</td>
+        </tr>
+        <tr>
+            <td>&gt;</td>
+            <td>Tests if a value is greater than another value</td>
+        </tr>
+        <tr>
+            <td>&lt;=</td>
+            <td>Tests if a value is less than or equal to another</td>
+        </tr>
+        <tr>
+            <td>&gt;=</td>
+            <td>Tests if a value is greater than or equal to another</td>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>Tests if a value equal to another</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>Tests if a value is not equal to another</td>
+        </tr>
+    </table>
+    <p>These operations are for testing primitive data only.  We can not use them on testing other forms of data.
+    Currently the only none primitive form of data we can make are Strings.  We will learn others and the same rule will
+    apply.  It is also important to note comaparing equality is not done with an '=' sign but with '=='.  This is because
+    '=' is call an assignment operator.  It assigns values to variables.  We need to use something else to compare equality
+    which is why we use '=='.</p>
+    <h2>Evaluating Relational Operators</h2>
+    <p>Remember that when we evaluate comaparative operators we will get a boolean as a result.  For example, 10 > 9 is true while
+     10 < 9 is false.  Examples in code:<br><code>System.out.println(10 != 10);<br></code>evaluates to false.  This is because 10
+     is equal to 10 which means the statement 10 ! 10 is false.</p>
+    <h2>Check Your Understanding</h2>
+    <p><code>System.out.println(12 >= 12.0)</code></p>
+    <div class="d-flex justify-content-around mb-lg-3">
+        <div onclick="getAnswer(true)" class="p-2 answer">Answer: true</div>
+        <div onclick="getAnswer(false)" class="p-2 answer">Answer: false</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> Solution: true.  In some languages we also compare data types.  So 12 would not be equal to 12.0 because
+        12.0 is a double while 12 is an integer.  In java we can compare integers and doubles.
+    </div>
+</div>
+</body>
+</html>

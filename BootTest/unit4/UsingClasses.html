@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Using Classes</h1>
+    <p>Last lesson we looked at how to do basic design of a class.  Now we will look at actually using a class in
+    our program.  The first to use a class is to instantiate it.  This means we are going to make what we call an
+    instance of the class.  Each instance of a class will contian all the same fields and methods as any other instance
+    of that class.  However,  the value held in memory at the fields can be different.  For example with our car class
+    all instances will have the variable called maxSpeed however the value held there can be different for each instance.
+    To create an instance of a class we will use the <code>new</code> keyword.  This tells the compiiler to create a spot
+    in memory that holds the new class and all of its information.  Example:<br><code>
+            Car toyota = new Car();<br>
+        </code> This code will create an instance of the car class and the variable toyota will point to its location
+    in memory.  We can now access all the public fields and methods inside the class.  If we were to create another
+    car instance we could set its fields to be different from the first.  This is the main idea of what we call
+    <b>Object Orientated Programming.</b>  We create objects that represent any <b>Type</b> of data we want.
+    This is also referred to as data abstraction</p>
+    <h2>Constructors</h2>
+    <p>Constructors are a special kind of method that runs when we instantiate an object.  This constructor can be used
+    to "setup" our object with desired parameters.  Example of the <b>constructor</b> method inside our class:<br>
+    <code>Car(int maxSpeed, String colour, String name){<br>&emsp;this.maxSpeed = maxSpeed;<br>&emsp;this.colour = colour;<br>
+    &emsp;this.name = name;<br>&emsp;currentSpeed = 0;<br>&emsp;}</code><br>  This will run whenever we construct a car
+    object.  It allows us to set values of the fields when it is created.  Notice the <b>this</b> keyword.  It is
+    referring to the object itself and when we set it equal to a value without <b>this</b> we are setting it equal to
+     what ever is being passed in as a parameter.</p>
+    <h2>The Accessor</h2>
+    <p>You have used accessors several times already.  They allow us to go into an object and access their public methods and
+    fields.  We use "." to access the properties of an object.  Example:<br><code>toyota.speedUp();<br></code>This
+    will go into the toyota instance of a class and run the method called speedUp.  Sometimes objects can hold other objects.
+    In this case we can go into the first object and then use the reference name for the second object to access its fields or
+    methods.  Example:<br><code>toyota.driver.getAge()<br></code>In this example the car class holds a reference to an
+    object.  Perhaps a person object.  There reference is called driver.  When we access car class we can access Person class
+    through the driver reference inside of the car class and then run its method of getAge().</p>
+    <h2>Check Your Understanding</h2>
+    <img class="mx-auto d-block" src="../images/classesimg1.png" height="870" width="986"/>
+    <p>What would be the values of the fields if the class was created with the following line of code:<br><code>
+        Person john = new Person(20, "Steve", "Programming");<br>
+    </code></p>
+    <div class="row">
+        <div class="col-lg-4 answer" onclick="getAnswer(false)">Age:0<br>Name:john</div>
+        <div class="col-lg-4 answer" onclick="getAnswer(false)">Age:20<br>Name:john<br>Interests:programming
+        </div>
+        <div class="col-lg-4 answer" onclick="getAnswer(true)">Age:20<br>Name:Steve<br>Interests;Programming
+        </div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> Age = 20, Name = Steve, Interests = Programming.  <br>The name
+        is not john because that is just the name of the variable that is holding the reference to the object.
+        The object field called name is holding "Steve".
+    </div>
+
+</div>
+</body>
+</html>

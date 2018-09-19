@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Debugging</h1>
+    <p>Recall our 3 main types of errors that we can get while programming they are <b>static, static semantic and semantic</b>.  The
+    first two 99% of the time the compiler will underline red for you while you are coding.  You can then read what the problem
+    is and fix it before running the program.  The last kind however, is much more difficult to catch and fix.  Semantic errors are
+    when you write the code properly it runs fine however, your output from the code is not what you expected.  This means there is a
+    mistake in your logic.  Example:
+    <br>You are writing code to take  persons name and change it to their first initial then a period then their last name.  When you take in the
+    name John Smith the program's output is J. mith even though we wanted J. Smith.  This is an example of semantic errors, they happen during the
+    programs run time.  The code runs fine and the only way to fix them is read through your code line by line until you find the mistake in logic.</p>
+    <h2>The Debugger</h2>
+    <p>The debugger is used to run through your code step by step.  In keeps track of your variables and checks your logical tests.  There is
+    a way to add in "breakpoints" by left clicking beside the line number.  This will tell your code to stop at this location and freeze.  From here
+    you can read what all the current variables are set to, and then choose to "step over" or "step into".  Step over will execute the line of
+    code and evaluate all expressions and tell then pause again after the line has run.  You can then go through and check how anything has changed.
+    Step into will go in to any methods that are in the line of code so you can then go through that method step by step.  It is advised that if it is
+    your own built method then step into is a good idea.  If it is a method provided by a library or java it self then assume that method is working correctly.
+    </p>
+    <h2>Other ways to debug</h2>
+    <p>Some times you may want to just do a simple check while you are coding.  One way to do this is add println statements to different parts of your code.
+    You can always delete them later once the code is written.  This allows you to look as you go how variables are changing.  Below is a video
+    that demonstrates how the debugger work to find a problem.</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2mUXCyfL2_w" allowfullscreen></iframe>
+    </div>
+    <h2>Check Your Understanding</h2>
+    <p>Semantic errors are so difficult to find and fix because?</p>
+    <div class="row">
+        <div class="col-lg-4 answer" onclick="getAnswer(false)">We cannot run the code while we have them making it difficult to narrow
+        down the problem.</div>
+        <div class="col-lg-4 answer" onclick="getAnswer(true)">The code runs fine we just have problems with our logic.
+        </div>
+        <div class="col-lg-4 answer" onclick="getAnswer(false)">Semantic errors are not fixable and it means that it is impossible to create the
+            code that we want,
+            integer.
+        </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> The code runs fine we just have problems with our logic.  There is technically nothing wrong with
+        your code and since the compiler does not know what you are intending to do with your code it cannot inform you of your mistakes.
+    </div>
+
+</div>
+</body>
+</html>

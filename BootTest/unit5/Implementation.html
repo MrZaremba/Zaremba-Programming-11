@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Implementing</h1>
+    <p>So far we have specified our data abstraction, determined the usage and created tests.  Now we need to implement the
+    code until all of our tests pass.  We will go through method by method and code each one.</p>
+
+    <h2>Insert Method</h2>
+    <p>We will us an arrayList to hold our integers for first we need to instantiate an array list and also create a new
+    arrayList in our constructor.</p>
+    <img class="img-fluid mx-auto d-block" src="../images/Implementation1.png" height="442" width="1012"/>
+    <h2>size method</h2>
+    <p>Notice when we run our tests they still fail.  We need to implement the size method now.  The arrayList class already has
+    a size method so we can just use that one.  We can simply return size() of the list.</p>
+    <img class="img-fluid mx-auto d-block" src="../images/Implementation2.png" height="112" width="627"/>
+    <h2>contains method</h2>
+    <p>The tests still fail until we implement our final method.  We can use the ArrayList method contains to check if our
+    arrayList contains our integer.  You might think that this is not good programming using all the built in methods from ArrayList,
+    However, this is actually a huge part of programming using other classes that have already been made to write our own.</p>
+    <img class="img-fluid mx-auto d-block" src="../images/implementation3.png" height="173" width="721"/>
+    <p>Now that all of our methods for insert work we know this class reliably will perform how we want it to.  Below is an
+    example of a slightly more complicated class being build in this way. The project from this video is called MovieTheatre and it is in our
+    github page if you want to look at the code and follow along.</p>
+        <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gIuEeYy-2rs" allowfullscreen></iframe>
+    </div>
+
+    <h2>Check Your Understanding</h2>
+    <p>Which one of these would properly test the remove method?</p>
+    <div class="row">
+        <div class="col-lg-4 answer" onclick="getAnswer(false)"><code>testSet.remove(3);<br>assertFalse(testSet.contains(3);</code></div>
+        <div class="col-lg-4 answer" onclick="getAnswer(false)"><code>testSet.add(3);<br>testSet.remove(3);<br>assertEquals(testSet.size(),0)l<br>assertTrue(testSet.contains(3));</code>
+        </div>
+        <div class="col-lg-4 answer" onclick="getAnswer(true)"><code>testSet.remove(3);<br>
+            assertEquals(testSet.size(), 0);<br>
+            assertFalse(testSet.contains(3));<br>
+            testSet.insert(3);<br>
+            testSet.remove(3);<br>
+            assertEquals(testSet.size(), 0);<br>
+            assertFalse(testSet.contains(3));</code>
+        </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> <br><code>testSet.remove(3);<br>
+        assertEquals(testSet.size(), 0);<br>
+        assertFalse(testSet.contains(3));<br>
+        testSet.insert(3);<br>
+        testSet.remove(3);<br>
+        assertEquals(testSet.size(), 0);<br>
+        assertFalse(testSet.contains(3));</code><br>
+        We need to test if the remove works if there is nothing to remove.
+    </div>
+
+</div>
+</body>
+</html>

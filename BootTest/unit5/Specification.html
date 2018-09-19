@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/questionsScript.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1 class="text-lg-center">Specification</h1>
+    <p>For the this unit we will walk through an example of a class and follow our 4 steps in creating it.  Were going to use a
+    simple example of data abstraction.  We will make an Integer Set.  The class will be a set of numbers that are of any size
+    (number of integers), it can only hold integers and it cannot contain any duplicates.  Examples:<br>
+    {3, 2, 6} -> is an appropriate set<br>{3, 2.5, 1} -> not appropriate<br>{3, 7, 3} -> not appropriate</p>
+    <p>First we want to think about what are the public methods to make up our interface.  We will want to main operations,
+    Insert and Remove an integer.  Now we need to look at what those methods are going to do.  We ask 3 questions:<br>
+    <ol>
+    <li><p>Prerequisites for correctness <small>Requires clause</small></p></li>
+    <li><p>What does it change? <small>Modifies clause</small></p></li>
+    <li><p>What does the method do? <small>Effects clause</small></p></li>
+</ol></p>
+    <h2>Requires</h2>
+    <p>This clause is used to to let us specify what the caller of a method has to ensure in order for that method
+    to run properly.  There is a precondition that needs to satisfied for method to operate in expected way.  Example:
+    <br><code>public double deposit(double amt){<br>&emsp;balance += amt;<br>&emsp;return balance;<br>&emsp;}</code><br>
+    We want the caller of this method that this amount should never be less than 0.  In a comment above the method we write
+        <br><b>//Requires amt >= 0</b><br>
+    This lets the user knows that if the requires clause is not met the method may not operate properly.</p>
+    <h2>Modifies</h2>
+    <p>To write modifies clause first understand the concept of mutability.  This idea is that we can change an
+    object and it stays changed.  There are some items in java that are not mutable, mainly strings, cannot be modified.
+    To see this effect create an array and create a string.  We can modify an index of a string but not an index of
+    a string.</p><img class="img-fluid mx-auto d-block" src="../images/Mutable.png" height="50%" width="50%"/>
+    <p>Looking at our deposit method.  We have a class we will call Account, a method that is public called deposit, and a
+    private implementation called balance.  When we call deposit we pass in amt.  The deposit method changes the balance.  Example:
+     make two deposits one for 5 and one for 3.  Both times it modifies balance which as now increased to 8.</p><img class="img-fluid mx-auto d-block"
+                                                                                                                     src="../images/modifies.png" height="30%" width="30%"/>
+    <p>To show that this method changes something we write a modifies clause.  Example:
+        <br><b>//Modifies: this</b><br>
+    We only say this because we are modifying its own class.  We do not want to give away private details to the public.
+    So we say only this.  An example when we would need to specify a class would be if we had an ArrayList&lt;Double&gt; named
+        <b>deposits</b> that kept a list of all the deposits.  We would add to the clause <br><b>//Modifies: this, deposits</b> </p>
+    <h2>Effects</h2>
+    <p>This clause indicates the purpose of the method, it is where you explain what the method does.  Our deposit example takes
+    in amt and adds it to the deposit.  It then returns the new balance.  Example:<br>
+    //Effects:adds amt to balance<br>returns balance</p>
+    <h2>Check Your Understanding</h2>
+    <p>Recall out Integer set class.  What is the appropriate Specification for the following method:<br><code>
+        public void insert(int num){<br>&emsp;<i>body</i><br>&emsp;}<br>
+    </code>We do not write the code yet that is the final step where we implement it.</p>
+    <div class="row">
+        <div class="col-lg-3 answer" onclick="getAnswer(true)">//Requires: int<br>//Modifies: this<br>//Effects: inserts num
+        if not already there, if num is there does nothing</div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">//Requires: unique int<br>//Modifies: IntegerSet<br>//Effects: inserts num
+            if not already there.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">//Requires: nothing<br>//Modifies: List<br>//Effects: adds num to list and returns num.
+        </div>
+        <div class="col-lg-3 answer" onclick="getAnswer(false)">//Requires: int <br>//Modifies: this<br>//Effects: adds num to
+        integer set and returns num</div>
+    </div>
+    <div class="alert alert-success invisible" id="solution">
+        <strong id="grade"></strong> To run this method we require an int.  The method modifies its own class so it modifies this.  Its
+        effects are inserts num if the num is not already part of the integer set.  Since the method has void it does not return a value.
+    </div>
+
+</div>
+</body>
+</html>
